@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东风跨境供应链金融服务速查表</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:#f0f2f5;line-height:1.6;color:#333}
+        .container{max-width:1400px;margin:0 auto;padding:20px}
+        
+        /* 头部 */
+        .header{background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 50%,#c2410c 100%);color:white;padding:30px;border-radius:12px;margin-bottom:25px;box-shadow:0 4px 20px rgba(0,0,0,0.15)}
+        .header h1{font-size:28px;margin-bottom:10px}
+        .header p{opacity:0.9;font-size:14px}
+        
+        /* 联系信息栏 */
+        .contact-bar{background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 100%);color:white;padding:15px 25px;border-radius:12px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;box-shadow:0 4px 15px rgba(0,0,0,0.1)}
+        .contact-info{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+        .contact-item{display:flex;align-items:center;gap:8px;font-size:15px}
+        .contact-item .icon{font-size:20px}
+        .contact-item a{color:white;text-decoration:none;transition:opacity 0.3s}
+        .contact-item a:hover{opacity:0.8}
+        .contact-btn{background:rgba(255,255,255,0.2);border:2px solid white;color:white;padding:10px 20px;border-radius:25px;cursor:pointer;font-size:14px;font-weight:500;transition:all 0.3s}
+        .contact-btn:hover{background:white;color:#1e3a8a}
+        
+        /* 搜索栏 */
+        .search-box{background:white;padding:20px;border-radius:10px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+        .search-input{width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:8px;font-size:14px;transition:border-color 0.3s}
+        .search-input:focus{outline:none;border-color:#7c3aed}
+        
+        /* 筛选标签 */
+        .filter-tags{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+        .filter-tag{padding:8px 16px;border-radius:20px;cursor:pointer;font-size:13px;transition:all 0.3s;background:#e5e7eb;color:#374151}
+        .filter-tag:hover{transform:translateY(-2px)}
+        .filter-tag.active{color:white}
+        .filter-tag.lc.active{background:#1e3a8a}
+        .filter-tag.sinosure.active{background:#be123c}
+        .filter-tag.export.active{background:#065f46}
+        .filter-tag.import.active{background:#7c3aed}
+        .filter-tag.scm.active{background:#c2410c}
+        .filter-tag.integrated.active{background:#4c1d95}
+        
+        /* 卡片网格 */
+        .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:20px}
+        
+        /* 卡片样式 */
+        .card{background:white;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}
+        .card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,0.12)}
+        .card-header{padding:20px;color:white;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+        .card-header.lc{background:#1e3a8a}
+        .card-header.sinosure{background:#be123c}
+        .card-header.export{background:#065f46}
+        .card-header.import{background:#7c3aed}
+        .card-header.scm{background:#c2410c}
+        .card-header.integrated{background:linear-gradient(135deg,#1e3a8a 0%,#be123c 50%,#065f46 100%)}
+        .card-title{font-size:18px;font-weight:600;display:flex;align-items:center;gap:12px}
+        .card-icon{font-size:24px}
+        .card-arrow{font-size:20px;transition:transform 0.3s}
+        .card-arrow.open{transform:rotate(180deg)}
+        
+        /* 卡片内容 */
+        .card-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+        .card-body.open{max-height:2000px}
+        .card-content{padding:20px}
+        
+        /* 表格样式 */
+        .data-table{width:100%;border-collapse:collapse;font-size:13px;margin:15px 0}
+        .data-table th{background:#f8fafc;padding:12px;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb}
+        .data-table td{padding:12px;border-bottom:1px solid #e5e7eb}
+        .data-table tr:hover{background:#f8fafc}
+        .data-table tr:nth-child(even){background:#fafafa}
+        
+        /* 高亮行 */
+        .highlight-row{background:#eff6ff!important}
+        
+        /* 标签 */
+        .tag{display:inline-block;padding:4px 10px;border-radius:4px;font-size:11px;font-weight:500}
+        .tag.lc{background:#dbeafe;color:#1e3a8a}
+        .tag.sinosure{background:#fecdd3;color:#be123c}
+        .tag.export{background:#a7f3d0;color:#065f46}
+        .tag.import{background:#ddd6fe;color:#7c3aed}
+        .tag.scm{background:#fed7aa;color:#c2410c}
+        
+        /* 信息列表 */
+        .info-list{list-style:none;padding:0;margin:15px 0}
+        .info-list li{padding:10px 0;border-bottom:1px solid #f3f4f6;display:flex;align-items:flex-start;gap:10px}
+        .info-list li:last-child{border-bottom:none}
+        .info-list li::before{content:"▸";color:#9ca3af}
+        .info-list li.highlight{color:#1e3a8a;font-weight:500}
+        
+        /* 流程步骤 */
+        .flow-steps{display:flex;gap:10px;margin:15px 0;flex-wrap:wrap}
+        .flow-step{flex:1;min-width:80px;text-align:center;padding:15px 10px;background:#f8fafc;border-radius:8px;border:2px solid transparent;transition:all 0.3s}
+        .flow-step.active{border-color:currentColor;font-weight:600}
+        .flow-step.lc.active{color:#1e3a8a;background:#eff6ff}
+        .flow-step.sinosure.active{color:#be123c;background:#fff1f2}
+        .flow-step.export.active{color:#065f46;background:#ecfdf5}
+        .flow-step.import.active{color:#7c3aed;background:#f5f3ff}
+        .flow-step.scm.active{color:#c2410c;background:#fff7ed}
+        .flow-step .num{font-size:18px;font-weight:bold;display:block;margin-bottom:5px}
+        
+        /* 数据展示 */
+        .data-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:15px 0}
+        .data-item{text-align:center;padding:20px;background:#f8fafc;border-radius:10px}
+        .data-item .value{font-size:24px;font-weight:700;display:block;margin-bottom:5px}
+        .data-item .value.lc{color:#1e3a8a}
+        .data-item .value.sinosure{color:#be123c}
+        .data-item .value.export{color:#065f46}
+        .data-item .value.import{color:#7c3aed}
+        .data-item .value.scm{color:#c2410c}
+        .data-item .label{font-size:12px;color:#6b7280}
+        
+        /* 提示框 */
+        .tip-box{padding:15px;border-radius:8px;margin:15px 0;font-size:13px}
+        .tip-box.lc{background:#eff6ff;border-left:4px solid #1e3a8a;color:#1e3a8a}
+        .tip-box.sinosure{background:#fff1f2;border-left:4px solid #be123c;color:#be123c}
+        .tip-box.export{background:#ecfdf5;border-left:4px solid #065f46;color:#065f46}
+        .tip-box.import{background:#f5f3ff;border-left:4px solid #7c3aed;color:#7c3aed}
+        .tip-box.scm{background:#fff7ed;border-left:4px solid #c2410c;color:#c2410c}
+        
+        /* 案例卡片 */
+        .case-card{background:#f8fafc;padding:15px;border-radius:8px;margin:15px 0;border-left:4px solid}
+        .case-card.lc{border-color:#1e3a8a}
+        .case-card.sinosure{border-color:#be123c}
+        .case-card.export{border-color:#065f46}
+        .case-card.import{border-color:#7c3aed}
+        .case-card.scm{border-color:#c2410c}
+        .case-title{font-weight:600;margin-bottom:8px;font-size:14px}
+        .case-title.lc{color:#1e3a8a}
+        .case-title.sinosure{color:#be123c}
+        .case-title.export{color:#065f46}
+        .case-title.import{color:#7c3aed}
+        .case-title.scm{color:#c2410c}
+        .case-content{font-size:13px;color:#4b5563;line-height:1.6}
+        
+        /* 公式框 */
+        .formula-box{padding:20px;border-radius:10px;text-align:center;margin:15px 0;background:#f8fafc}
+        .formula-main{font-size:16px;font-weight:600;margin-bottom:8px}
+        .formula-sub{font-size:13px;color:#6b7280}
+        
+        /* 对比表格 */
+        .compare-section{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:20px}
+        .compare-title{font-size:20px;font-weight:600;margin-bottom:20px;color:#1f2937}
+        
+        /* FAQ手风琴 */
+        .faq-section{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:20px}
+        .faq-title{font-size:18px;font-weight:600;margin-bottom:20px;color:#1f2937;display:flex;align-items:center;gap:10px}
+        .faq-item{border-bottom:1px solid #e5e7eb}
+        .faq-item:last-child{border-bottom:none}
+        .faq-question{padding:15px 0;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:14px;font-weight:500;color:#374151;transition:color 0.3s}
+        .faq-question:hover{color:#7c3aed}
+        .faq-arrow{font-size:16px;transition:transform 0.3s}
+        .faq-arrow.open{transform:rotate(180deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding:0 20px}
+        .faq-answer.open{max-height:200px;padding-bottom:15px}
+        .faq-answer-text{font-size:13px;color:#6b7280;line-height:1.8}
+        
+        /* 聊天窗口 */
+        .chat-widget{position:fixed;bottom:100px;right:20px;width:380px;height:500px;background:white;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.2);display:none;flex-direction:column;z-index:150;overflow:hidden}
+        .chat-widget.show{display:flex}
+        .chat-header{background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 100%);color:white;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}
+        .chat-header-info{display:flex;align-items:center;gap:12px}
+        .chat-avatar{width:40px;height:40px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;font-size:20px}
+        .chat-title{font-size:16px;font-weight:600}
+        .chat-subtitle{font-size:12px;opacity:0.9}
+        .chat-close{width:32px;height:32px;border:none;background:rgba(255,255,255,0.2);border-radius:50%;cursor:pointer;color:white;font-size:18px;transition:background 0.3s}
+        .chat-close:hover{background:rgba(255,255,255,0.3)}
+        .chat-body{flex:1;overflow-y:auto;padding:20px;background:#f8fafc}
+        .chat-message{margin-bottom:15px;display:flex;align-items:flex-start;gap:10px}
+        .chat-message.user{flex-direction:row-reverse}
+        .chat-bubble{max-width:70%;padding:12px 16px;border-radius:16px;font-size:14px;line-height:1.5}
+        .chat-message.bot .chat-bubble{background:white;border:1px solid #e5e7eb;color:#374151;border-bottom-left-radius:4px}
+        .chat-message.user .chat-bubble{background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 100%);color:white;border-bottom-right-radius:4px}
+        .chat-time{font-size:11px;color:#9ca3af;margin-top:5px;text-align:center}
+        .chat-footer{padding:15px;background:white;border-top:1px solid #e5e7eb}
+        .chat-input-wrapper{display:flex;gap:10px}
+        .chat-input{flex:1;padding:12px 16px;border:2px solid #e5e7eb;border-radius:25px;font-size:14px;outline:none;transition:border-color 0.3s}
+        .chat-input:focus{border-color:#7c3aed}
+        .chat-send{width:44px;height:44px;border:none;background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 100%);color:white;border-radius:50%;cursor:pointer;font-size:18px;transition:transform 0.3s}
+        .chat-send:hover{transform:scale(1.05)}
+        .chat-quick-replies{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+        .chat-quick-btn{padding:8px 14px;background:#f3f4f6;border:none;border-radius:16px;font-size:12px;color:#374151;cursor:pointer;transition:all 0.3s}
+        .chat-quick-btn:hover{background:#e5e7eb}
+        
+        /* 微信二维码弹窗 */
+        .wechat-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:300;display:none;align-items:center;justify-content:center}
+        .wechat-modal.show{display:flex}
+        .wechat-content{background:white;padding:30px;border-radius:16px;text-align:center;max-width:320px}
+        .wechat-title{font-size:18px;font-weight:600;margin-bottom:10px;color:#1f2937}
+        .wechat-subtitle{font-size:13px;color:#6b7280;margin-bottom:20px}
+        .wechat-qrcode{width:200px;height:200px;background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:80px}
+        .wechat-close{padding:10px 24px;background:#f3f4f6;border:none;border-radius:8px;font-size:14px;cursor:pointer;transition:background 0.3s}
+        .wechat-close:hover{background:#e5e7eb}
+        
+        /* 底部工具栏 */
+        .toolbar{position:fixed;bottom:20px;right:20px;display:flex;gap:10px;z-index:100}
+        .tool-btn{padding:12px 20px;border-radius:25px;border:none;cursor:pointer;font-size:14px;font-weight:500;transition:all 0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.15)}
+        .tool-btn.primary{background:#7c3aed;color:white}
+        .tool-btn.secondary{background:white;color:#374151}
+        .tool-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+        
+        /* 导出菜单 */
+        .export-menu{position:fixed;bottom:80px;right:20px;background:white;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.15);padding:10px;display:none;min-width:240px}
+        .export-menu.show{display:block}
+        .export-option{padding:12px 16px;cursor:pointer;border-radius:8px;font-size:14px;display:flex;align-items:center;gap:10px;transition:background 0.3s}
+        .export-option:hover{background:#f3f4f6}
+        
+        /* 浮动按钮 */
+        .float-btn{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 100%);color:white;border:none;cursor:pointer;font-size:28px;box-shadow:0 4px 20px rgba(0,0,0,0.3);transition:transform 0.3s;z-index:140;display:flex;align-items:center;justify-content:center}
+        .float-btn:hover{transform:scale(1.1)}
+        .float-btn.hidden{display:none}
+        
+        /* 预览弹窗 */
+        .preview-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:300;display:none;align-items:center;justify-content:center}
+        .preview-modal.show{display:flex}
+        .preview-content{background:white;border-radius:16px;width:90%;max-width:700px;max-height:80vh;display:flex;flex-direction:column}
+        .preview-header{padding:20px;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between}
+        .preview-title{font-size:18px;font-weight:600}
+        .preview-close{width:32px;height:32px;border:none;background:#f3f4f6;border-radius:50%;cursor:pointer;font-size:18px}
+        .preview-body{flex:1;overflow:auto;padding:20px}
+        .preview-table{width:100%;border-collapse:collapse;font-size:13px}
+        .preview-table th{background:#f8fafc;padding:12px;text-align:left;font-weight:600;border-bottom:2px solid #e5e7eb}
+        .preview-table td{padding:12px;border-bottom:1px solid #e5e7eb}
+        .preview-text{font-family:"SF Mono","Consolas",monospace;font-size:13px;line-height:1.8;white-space:pre-wrap;background:#f8fafc;padding:20px;border-radius:8px}
+        .preview-footer{padding:15px 20px;border-top:1px solid #e5e7eb;display:flex;gap:10px;justify-content:flex-end}
+        .preview-btn{padding:10px 20px;border-radius:8px;border:none;cursor:pointer;font-size:14px;transition:all 0.3s}
+        .preview-btn.primary{background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 100%);color:white}
+        .preview-btn.secondary{background:#f3f4f6;color:#374151}
+        
+        /* 打印样式 */
+        @media print{
+            .toolbar,.filter-tags,.search-box,.contact-bar,.chat-widget,.float-btn,.export-menu,.preview-modal{display:none}
+            .card-body{max-height:none!important}
+            body{background:white}
+        }
+        
+        /* 响应式 */
+        @media (max-width:768px){
+            .card-grid{grid-template-columns:1fr}
+            .data-grid{grid-template-columns:repeat(2,1fr)}
+            .header h1{font-size:22px}
+            .chat-widget{width:calc(100% - 40px);height:60vh;right:20px;left:20px}
+            .contact-bar{flex-direction:column;text-align:center}
+            .contact-info{justify-content:center}
+            .preview-content{width:95%;max-height:90vh}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>🏦 东风跨境供应链金融服务速查表</h1>
+            <p>覆盖信用证、中信保、出口垫税、进口垫税、供应链金融五大工具 | 2026专业版</p>
+        </div>
+        
+        <!-- 联系信息栏 -->
+        <div class="contact-bar">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">👨‍💼</span>
+                    <span>专属顾问：李经理</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📞</span>
+                    <a href="tel:18607128617">186-0712-8617</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">💬</span>
+                    <span>微信同号</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">⏰</span>
+                    <span>服务时间：9:00-18:00</span>
+                </div>
+            </div>
+            <button class="contact-btn" onclick="openChat()">💬 在线咨询</button>
+        </div>
+        
+        <!-- 搜索 -->
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍 搜索产品名称、费率、适用场景..." oninput="performSearch()">
+        </div>
+        
+        <!-- 筛选 -->
+        <div class="filter-tags">
+            <span class="filter-tag active" onclick="setFilter('all')">全部显示</span>
+            <span class="filter-tag lc" onclick="setFilter('lc')">信用证融资</span>
+            <span class="filter-tag sinosure" onclick="setFilter('sinosure')">中信保服务</span>
+            <span class="filter-tag export" onclick="setFilter('export')">出口垫税</span>
+            <span class="filter-tag import" onclick="setFilter('import')">进口垫税</span>
+            <span class="filter-tag scm" onclick="setFilter('scm')">供应链金融</span>
+            <span class="filter-tag integrated" onclick="setFilter('integrated')">综合方案</span>
+        </div>
+        
+        <!-- 搜索结果 -->
+        <div id="searchResults" style="display:none;margin-bottom:20px"></div>
+        
+        <!-- 对比总览 -->
+        <div class="compare-section" id="overviewCard">
+            <div class="compare-title">📊 五大工具功能对比总览</div>
+            <table class="data-table" id="compareTable">
+                <tr>
+                    <th>金融工具</th>
+                    <th>核心功能</th>
+                    <th>融资比例</th>
+                    <th>成本区间</th>
+                    <th>适用企业</th>
+                    <th>风险等级</th>
+                </tr>
+                <tr>
+                    <td><span class="tag lc">信用证</span></td>
+                    <td>银行信用结算/福费廷贴现</td>
+                    <td>90-100%</td>
+                    <td>3%-8%</td>
+                    <td>进出口企业</td>
+                    <td>⭐⭐ 低</td>
+                </tr>
+                <tr>
+                    <td><span class="tag sinosure">中信保</span></td>
+                    <td>出口信用风险保障</td>
+                    <td>80-90%赔付</td>
+                    <td>0.3%-3%</td>
+                    <td>赊销出口企业</td>
+                    <td>⭐⭐⭐ 中</td>
+                </tr>
+                <tr>
+                    <td><span class="tag export">出口垫税</span></td>
+                    <td>出口退税款前置融资</td>
+                    <td>70-95%</td>
+                    <td>4%-8%</td>
+                    <td>出口退税企业</td>
+                    <td>⭐⭐ 低</td>
+                </tr>
+                <tr>
+                    <td><span class="tag import">进口垫税</span></td>
+                    <td>海关税款担保/垫付</td>
+                    <td>100%</td>
+                    <td>8%-15%</td>
+                    <td>进口纳税企业</td>
+                    <td>⭐⭐⭐ 中</td>
+                </tr>
+                <tr>
+                    <td><span class="tag scm">供应链金融</span></td>
+                    <td>应收账款/存货/预付款融资</td>
+                    <td>50-90%</td>
+                    <td>6%-15%</td>
+                    <td>产业链上下游</td>
+                    <td>⭐⭐⭐⭐ 中高</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 卡片网格 -->
+        <div class="card-grid" id="cardGrid">
+            <!-- 信用证融资 -->
+            <div class="card" data-category="lc">
+                <div class="card-header lc" onclick="toggleCard(this)">
+                    <div class="card-title">
+                        <span class="card-icon">📋</span>
+                        <span>信用证融资速查表</span>
+                    </div>
+                    <span class="card-arrow">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <div class="formula-box">
+                            <div class="formula-main lc">信用证融资 = 银行信用替代商业信用</div>
+                            <div class="formula-sub">凭相符单据即可获得付款保障，安全高效</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#1e3a8a">📋 主要产品类型</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>产品名称</th>
+                                <th>融资时点</th>
+                                <th>融资比例</th>
+                                <th>期限</th>
+                                <th>适用场景</th>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>即期信用证</strong></td>
+                                <td>单证相符后</td>
+                                <td>100%</td>
+                                <td>即期</td>
+                                <td>安全收款</td>
+                            </tr>
+                            <tr>
+                                <td><strong>远期信用证</strong></td>
+                                <td>承兑后</td>
+                                <td>100%</td>
+                                <td>30-360天</td>
+                                <td>延期付款</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>假远期LC</strong></td>
+                                <td>即期付款</td>
+                                <td>100%</td>
+                                <td>买方付息</td>
+                                <td>买卖双方双赢</td>
+                            </tr>
+                            <tr>
+                                <td><strong>福费廷 ⭐推荐</strong></td>
+                                <td>承兑后贴现</td>
+                                <td>90-100%</td>
+                                <td>无追索权</td>
+                                <td>优化财务报表</td>
+                            </tr>
+                            <tr>
+                                <td><strong>打包贷款</strong></td>
+                                <td>收到LC后</td>
+                                <td>70-80%</td>
+                                <td>LC有效期</td>
+                                <td>备货资金</td>
+                            </tr>
+                            <tr>
+                                <td><strong>出口押汇</strong></td>
+                                <td>交单后</td>
+                                <td>80-90%</td>
+                                <td>有追索权</td>
+                                <td>快速回款</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#1e3a8a">🔄 标准操作流程</h4>
+                        <div class="flow-steps">
+                            <div class="flow-step lc active"><span class="num">1</span>进口商<br>申请开证</div>
+                            <div class="flow-step"><span class="num">2</span>开证行<br>开立LC</div>
+                            <div class="flow-step"><span class="num">3</span>通知行<br>通知出口商</div>
+                            <div class="flow-step"><span class="num">4</span>出口商<br>发货交单</div>
+                            <div class="flow-step"><span class="num">5</span>银行<br>审单付款</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#1e3a8a">💰 费用成本明细</h4>
+                        <table class="data-table">
+                            <tr><th>费用项目</th><th>费率标准</th><th>计费基础</th><th>备注</th></tr>
+                            <tr><td>开证手续费</td><td>0.1%-0.3%</td><td>LC金额</td><td>最低￥200</td></tr>
+                            <tr><td>承兑费</td><td>0.1%-0.3%/季</td><td>承兑金额</td><td>远期LC收取</td></tr>
+                            <tr class="highlight-row"><td>福费廷利率</td><td>Libor+100-300bp</td><td>贴现金额</td><td>无追索权</td></tr>
+                            <tr><td>修改费</td><td>￥200-500/笔</td><td>按笔</td><td>LC修改时</td></tr>
+                            <tr><td>邮电费</td><td>￥200-400/笔</td><td>按笔</td><td>swift费用</td></tr>
+                        </table>
+                        
+                        <div class="tip-box lc">
+                            <strong>💡 优化策略：</strong>
+                            ① 福费廷替代出口押汇可降低利率200-300bp；② 假远期LC实现即期收款同时给买方账期；③ 打包贷款+福费廷组合解决备货资金
+                        </div>
+                        
+                        <div class="case-card lc">
+                            <div class="case-title lc">📌 典型案例：福费廷降本增效</div>
+                            <div class="case-content">
+                                <strong>企业背景：</strong>某机械出口企业，年LC结算量2000万美元<br>
+                                <strong>原方案：</strong>出口押汇，利率7%，有追索权<br>
+                                <strong>优化方案：</strong>改用福费廷，利率4.5%，无追索权<br>
+                                <strong>效果：</strong>年节省利息50万美元，优化财务报表，降低资产负债率
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 中信保 -->
+            <div class="card" data-category="sinosure">
+                <div class="card-header sinosure" onclick="toggleCard(this)">
+                    <div class="card-title">
+                        <span class="card-icon">🛡️</span>
+                        <span>中信保服务速查表</span>
+                    </div>
+                    <span class="card-arrow">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <div class="formula-box">
+                            <div class="formula-main sinosure">中信保保障 = 国家信用背书</div>
+                            <div class="formula-sub">覆盖商业风险（拖欠、破产）和政治风险（战争、汇兑限制）</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#be123c">📋 主要产品类型</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>产品名称</th>
+                                <th>保障范围</th>
+                                <th>赔付比例</th>
+                                <th>费率区间</th>
+                                <th>最高赔偿</th>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>短期出口信用险 ⭐</strong></td>
+                                <td>商业+政治风险</td>
+                                <td>80-90%</td>
+                                <td>0.3%-3%</td>
+                                <td>保单约定</td>
+                            </tr>
+                            <tr>
+                                <td><strong>国内贸易信用险</strong></td>
+                                <td>拖欠+破产</td>
+                                <td>80-90%</td>
+                                <td>0.3%-2%</td>
+                                <td>保单约定</td>
+                            </tr>
+                            <tr>
+                                <td><strong>中长期出口信用险</strong></td>
+                                <td>大型项目/设备</td>
+                                <td>85-95%</td>
+                                <td>个案定价</td>
+                                <td>项目金额</td>
+                            </tr>
+                            <tr>
+                                <td><strong>投资保险</strong></td>
+                                <td>征收+战争+汇兑</td>
+                                <td>90%</td>
+                                <td>0.3%-0.7%</td>
+                                <td>投资金额</td>
+                            </tr>
+                            <tr>
+                                <td><strong>担保业务</strong></td>
+                                <td>融资担保</td>
+                                <td>100%</td>
+                                <td>1%-3%</td>
+                                <td>担保金额</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#be123c">🔄 标准操作流程</h4>
+                        <div class="flow-steps">
+                            <div class="flow-step sinosure active"><span class="num">1</span>投保申请<br>资信调查</div>
+                            <div class="flow-step"><span class="num">2</span>批复限额<br>确定费率</div>
+                            <div class="flow-step"><span class="num">3</span>签订合同<br>缴纳保费</div>
+                            <div class="flow-step"><span class="num">4</span>出运申报<br>缴纳保费</div>
+                            <div class="flow-step"><span class="num">5</span>应收账款<br>催收管理</div>
+                            <div class="flow-step"><span class="num">6</span>出险理赔<br>定损核赔</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#be123c">💰 费用成本明细</h4>
+                        <table class="data-table">
+                            <tr><th>费用项目</th><th>费率标准</th><th>计费基础</th><th>备注</th></tr>
+                            <tr class="highlight-row"><td>基本保费</td><td>0.3%-3%</td><td>申报出口额</td><td>主要成本</td></tr>
+                            <tr><td>最低保费</td><td>￥3000-5000</td><td>年</td><td>小微企业优惠</td></tr>
+                            <tr><td>保单融资利息</td><td>LPR+100-300bp</td><td>融资金额</td><td>无追索权</td></tr>
+                            <tr><td>资信调查费</td><td>￥200-2000/户</td><td>按户</td><td>买方资信</td></tr>
+                            <tr><td>追偿费用</td><td>实际发生</td><td>-</td><td>先追偿后赔付</td></tr>
+                        </table>
+                        
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <span class="value sinosure">80-90%</span>
+                                <span class="label">赔付比例</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value sinosure">90-180天</span>
+                                <span class="label">定损核赔时效</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value sinosure">T+0~3</span>
+                                <span class="label">保单融资放款</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value sinosure">4个月</span>
+                                <span class="label">报案时限</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-box sinosure">
+                            <strong>⚠️ 重要提示：</strong>
+                            ① 拖欠发生后4个月内必须报案，否则可能丧失索赔权；② 买方限额动态调整，需关注资信变化；③ 政治风险赔付通常高于商业风险
+                        </div>
+                        
+                        <div class="case-card sinosure">
+                            <div class="case-title sinosure">📌 典型案例：新兴市场开拓</div>
+                            <div class="case-content">
+                                <strong>企业背景：</strong>某家电企业计划开拓非洲市场，担心收款风险<br>
+                                <strong>解决方案：</strong>投保短期出口信用险，覆盖买方破产和汇兑限制风险<br>
+                                <strong>效果：</strong>成功进入5个非洲国家，年出口增长300%，实现零坏账
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 出口垫税 -->
+            <div class="card" data-category="export">
+                <div class="card-header export" onclick="toggleCard(this)">
+                    <div class="card-title">
+                        <span class="card-icon">💰</span>
+                        <span>出口垫税融资速查表</span>
+                    </div>
+                    <span class="card-arrow">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <div class="formula-box">
+                            <div class="formula-main export">出口垫税 = 应退税款 × 垫付比例</div>
+                            <div class="formula-sub">将未来3-6个月才能到账的退税款，提前变现为流动资金</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#065f46">📋 主要产品类型</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>产品名称</th>
+                                <th>垫付比例</th>
+                                <th>融资期限</th>
+                                <th>额度类型</th>
+                                <th>适用企业</th>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>退税池融资 ⭐推荐</strong></td>
+                                <td>80-95%</td>
+                                <td>循环使用</td>
+                                <td>年度授信额度</td>
+                                <td>退税大户</td>
+                            </tr>
+                            <tr>
+                                <td><strong>单笔退税融资</strong></td>
+                                <td>70-90%</td>
+                                <td>3-12个月</td>
+                                <td>单笔审批</td>
+                                <td>偶发性需求</td>
+                            </tr>
+                            <tr>
+                                <td><strong>信保项下垫税</strong></td>
+                                <td>80-90%</td>
+                                <td>保单期限</td>
+                                <td>与保单联动</td>
+                                <td>有中信保企业</td>
+                            </tr>
+                            <tr>
+                                <td><strong>跨境电商平台垫税</strong></td>
+                                <td>70-85%</td>
+                                <td>滚动额度</td>
+                                <td>平台数据授信</td>
+                                <td>跨境电商</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#065f46">🔄 标准操作流程</h4>
+                        <div class="flow-steps">
+                            <div class="flow-step export active"><span class="num">1</span>签订协议<br>授信审批</div>
+                            <div class="flow-step"><span class="num">2</span>出口报关<br>取得单据</div>
+                            <div class="flow-step"><span class="num">3</span>退税申报<br>提交资料</div>
+                            <div class="flow-step"><span class="num">4</span>税务审核<br>确认税额</div>
+                            <div class="flow-step"><span class="num">5</span>垫资放款<br>资金到账</div>
+                            <div class="flow-step"><span class="num">6</span>税款到账<br>归还融资</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#065f46">💰 费用成本明细</h4>
+                        <table class="data-table">
+                            <tr><th>费用项目</th><th>费率标准</th><th>计费基础</th><th>备注</th></tr>
+                            <tr class="highlight-row"><td>融资利息</td><td>4%-8%/年</td><td>垫资金额×天数</td><td>主要成本</td></tr>
+                            <tr><td>手续费</td><td>0.5%-1%</td><td>垫资金额</td><td>一次性</td></tr>
+                            <tr><td>账户监管费</td><td>0.1%-0.3%</td><td>年</td><td>退税账户监管</td></tr>
+                            <tr><td>评估费</td><td>￥3000-5000</td><td>年</td><td>额度评估</td></tr>
+                            <tr><td><strong>综合成本</strong></td><td><strong>5%-10%/年</strong></td><td>-</td><td>总成本</td></tr>
+                        </table>
+                        
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <span class="value export">70-95%</span>
+                                <span class="label">垫付比例</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value export">3-12个月</span>
+                                <span class="label">融资期限</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value export">T+0~3</span>
+                                <span class="label">放款时效</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value export">循环</span>
+                                <span class="label">退税池额度</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-box export">
+                            <strong>✅ 准入条件：</strong>
+                            ① 出口退税一类或二类企业；② 持续经营3年以上；③ 年出口额500万元以上；④ 无重大税务违规记录；⑤ 退税账户需监管
+                        </div>
+                        
+                        <div class="case-card export">
+                            <div class="case-title export">📌 典型案例：退税池循环融资</div>
+                            <div class="case-content">
+                                <strong>企业背景：</strong>某电子元器件出口企业，年出口退税额800万元<br>
+                                <strong>解决方案：</strong>建立退税池融资额度720万元（90%），循环使用<br>
+                                <strong>效果：</strong>实现随借随还，资金成本较流贷降低40%，年节省财务费用20万元
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 进口垫税 -->
+            <div class="card" data-category="import">
+                <div class="card-header import" onclick="toggleCard(this)">
+                    <div class="card-title">
+                        <span class="card-icon">🚢</span>
+                        <span>进口垫税融资速查表</span>
+                    </div>
+                    <span class="card-arrow">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <div class="formula-box">
+                            <div class="formula-main import">进口垫税 = 海关税款 × 垫付比例</div>
+                            <div class="formula-sub">先提货后缴税，加速货物流转，缓解资金占用</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#7c3aed">📋 主要产品类型</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>产品名称</th>
+                                <th>垫付比例</th>
+                                <th>担保期限</th>
+                                <th>额度类型</th>
+                                <th>适用场景</th>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>海关税款保函 ⭐</strong></td>
+                                <td>100%</td>
+                                <td>1-6个月</td>
+                                <td>单笔/总担保</td>
+                                <td>一般贸易进口</td>
+                            </tr>
+                            <tr>
+                                <td><strong>汇总征税保函</strong></td>
+                                <td>按月汇总</td>
+                                <td>次月5日前</td>
+                                <td>年度总担保</td>
+                                <td>高频进口企业</td>
+                            </tr>
+                            <tr>
+                                <td><strong>税款保付</strong></td>
+                                <td>100%</td>
+                                <td>15-90天</td>
+                                <td>单笔审批</td>
+                                <td>临时性需求</td>
+                            </tr>
+                            <tr>
+                                <td><strong>先放后税</strong></td>
+                                <td>100%</td>
+                                <td>7-30天</td>
+                                <td>AEO企业专享</td>
+                                <td>急需提货</td>
+                            </tr>
+                            <tr>
+                                <td><strong>保税仓储融资</strong></td>
+                                <td>70-80%</td>
+                                <td>保税期内</td>
+                                <td>库存联动</td>
+                                <td>保税业务</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#7c3aed">🔄 标准操作流程</h4>
+                        <div class="flow-steps">
+                            <div class="flow-step import active"><span class="num">1</span>进口申报<br>海关审价</div>
+                            <div class="flow-step"><span class="num">2</span>确定税额<br>申请担保</div>
+                            <div class="flow-step"><span class="num">3</span>银行出函<br>海关备案</div>
+                            <div class="flow-step"><span class="num">4</span>先放后税<br>提取货物</div>
+                            <div class="flow-step"><span class="num">5</span>垫付税款<br>企业还款</div>
+                            <div class="flow-step"><span class="num">6</span>担保撤销<br>循环额度</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#7c3aed">💰 费用成本明细</h4>
+                        <table class="data-table">
+                            <tr><th>费用项目</th><th>费率标准</th><th>计费基础</th><th>备注</th></tr>
+                            <tr><td>保函手续费</td><td>0.5%-2%/季</td><td>担保金额</td><td>按季收取</td></tr>
+                            <tr class="highlight-row"><td>垫款利息</td><td>LPR+200-400bp</td><td>垫资金额×天数</td><td>主要成本</td></tr>
+                            <tr><td>手续费</td><td>0.3%-1%</td><td>担保金额</td><td>一次性</td></tr>
+                            <tr><td>海关滞纳金</td><td>0.05%/日</td><td>滞纳税款</td><td>超期未还</td></tr>
+                            <tr><td><strong>综合成本</strong></td><td><strong>8%-15%/年</strong></td><td>-</td><td>总成本</td></tr>
+                        </table>
+                        
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <span class="value import">100%</span>
+                                <span class="label">税款垫付</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value import">7-180天</span>
+                                <span class="label">融资期限</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value import">T+0~1</span>
+                                <span class="label">放行时效</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value import">循环</span>
+                                <span class="label">总担保额度</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-box import">
+                            <strong>💡 优化策略：</strong>
+                            ① 申请AEO高级认证，享受先放后税便利；② 办理汇总征税+总担保，替代单笔保函；③ 合理规划进口节奏，集中申报降低保函费
+                        </div>
+                        
+                        <div class="case-card import">
+                            <div class="case-title import">📌 典型案例：汇总征税提效降本</div>
+                            <div class="case-content">
+                                <strong>企业背景：</strong>某化工企业月均进口20票，单票税款50-200万元<br>
+                                <strong>原方案：</strong>逐笔缴纳关税，资金占用大，通关慢<br>
+                                <strong>优化方案：</strong>办理汇总征税+年度总担保额度5000万元<br>
+                                <strong>效果：</strong>通关时间从3天缩短至4小时，年节省资金成本120万元
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 供应链金融 -->
+            <div class="card" data-category="scm">
+                <div class="card-header scm" onclick="toggleCard(this)">
+                    <div class="card-title">
+                        <span class="card-icon">🔗</span>
+                        <span>供应链金融服务手册</span>
+                    </div>
+                    <span class="card-arrow">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <div class="formula-box">
+                            <div class="formula-main scm">供应链金融 = 核心企业信用 + 真实交易背景</div>
+                            <div class="formula-sub">依托产业链上下游真实交易，1+N服务模式，解决中小企业融资难题</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#c2410c">🏗️ 三大核心模式</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>业务模式</th>
+                                <th>融资时点</th>
+                                <th>质押标的</th>
+                                <th>融资比例</th>
+                                <th>核心风控</th>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>应收账款融资 ⭐</strong></td>
+                                <td>发货后</td>
+                                <td>应收账款</td>
+                                <td>70-90%</td>
+                                <td>买方确权+回款锁定</td>
+                            </tr>
+                            <tr>
+                                <td><strong>库存/仓单融资</strong></td>
+                                <td>入库后</td>
+                                <td>存货/仓单</td>
+                                <td>50-80%</td>
+                                <td>货物监管+价格监控</td>
+                            </tr>
+                            <tr>
+                                <td><strong>预付款融资</strong></td>
+                                <td>采购前</td>
+                                <td>提货权/未来货权</td>
+                                <td>70-80%</td>
+                                <td>核心企业担保+回款锁定</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#c2410c">📋 细分产品类型</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>产品名称</th>
+                                <th>适用场景</th>
+                                <th>融资比例</th>
+                                <th>期限</th>
+                                <th>特点</th>
+                            </tr>
+                            <tr>
+                                <td><strong>保理融资</strong></td>
+                                <td>赊销占款</td>
+                                <td>70-90%</td>
+                                <td>30-180天</td>
+                                <td>应收账款转让</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>反向保理</strong></td>
+                                <td>核心企业供应商</td>
+                                <td>80-95%</td>
+                                <td>账期+宽限期</td>
+                                <td>核心企业确权</td>
+                            </tr>
+                            <tr>
+                                <td><strong>电子债权凭证</strong></td>
+                                <td>数字化应收账款</td>
+                                <td>90-100%</td>
+                                <td>可拆分流转</td>
+                                <td>区块链存证</td>
+                            </tr>
+                            <tr>
+                                <td><strong>动态库存融资</strong></td>
+                                <td>存货占用资金</td>
+                                <td>50-70%</td>
+                                <td>循环额度</td>
+                                <td>随借随还</td>
+                            </tr>
+                            <tr>
+                                <td><strong>订单融资</strong></td>
+                                <td>有订单缺资金</td>
+                                <td>30-50%</td>
+                                <td>订单执行期</td>
+                                <td>订单质押</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#c2410c">🔄 标准操作流程</h4>
+                        <div class="flow-steps">
+                            <div class="flow-step scm active"><span class="num">1</span>核心企业<br>准入授信</div>
+                            <div class="flow-step"><span class="num">2</span>上下游企业<br>链上准入</div>
+                            <div class="flow-step"><span class="num">3</span>签订合同<br>系统对接</div>
+                            <div class="flow-step"><span class="num">4</span>交易确权<br>融资申请</div>
+                            <div class="flow-step"><span class="num">5</span>智能审批<br>快速放款</div>
+                            <div class="flow-step"><span class="num">6</span>回款监控<br>闭环管理</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#c2410c">💰 费用成本明细</h4>
+                        <table class="data-table">
+                            <tr><th>费用项目</th><th>费率标准</th><th>计费基础</th><th>备注</th></tr>
+                            <tr class="highlight-row"><td>融资利息</td><td>5%-12%/年</td><td>融资金额</td><td>主要成本</td></tr>
+                            <tr><td>平台服务费</td><td>0.5%-2%</td><td>交易金额</td><td>科技平台</td></tr>
+                            <tr><td>监管费</td><td>0.3%-1%</td><td>监管货值</td><td>第三方监管</td></tr>
+                            <tr><td>保险费</td><td>0.1%-0.5%</td><td>融资金额</td><td>货物运输险</td></tr>
+                            <tr><td><strong>综合成本</strong></td><td><strong>6%-15%/年</strong></td><td>-</td><td>总成本</td></tr>
+                        </table>
+                        
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <span class="value scm">50-90%</span>
+                                <span class="label">融资比例</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value scm">T+0~1</span>
+                                <span class="label">线上放款</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value scm">1+N</span>
+                                <span class="label">服务模式</span>
+                            </div>
+                            <div class="data-item">
+                                <span class="value scm">四流合一</span>
+                                <span class="label">风控核心</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-box scm">
+                            <strong>⚠️ 风控要点：</strong>
+                            ① 贸易真实性（合同、发票、物流、资金流四流合一）；② 核心企业信用风险；③ 货物监管与价格监控；④ 回款账户封闭管理
+                        </div>
+                        
+                        <div class="case-card scm">
+                            <div class="case-title scm">📌 典型案例：汽车产业链反向保理</div>
+                            <div class="case-content">
+                                <strong>企业背景：</strong>某汽车主机厂上游200+零部件供应商，账期90天<br>
+                                <strong>解决方案：</strong>搭建供应链金融平台，核心企业确权，供应商线上融资<br>
+                                <strong>效果：</strong>供应商账期从90天缩短至T+1，融资成本降低40%，主机厂供应链稳定性显著提升
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 综合方案 -->
+            <div class="card" data-category="integrated">
+                <div class="card-header integrated" onclick="toggleCard(this)">
+                    <div class="card-title">
+                        <span class="card-icon">🌈</span>
+                        <span>供应链综合金融服务手册</span>
+                    </div>
+                    <span class="card-arrow">▼</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-content">
+                        <div class="formula-box">
+                            <div class="formula-main integrated">综合方案 = LC + 中信保 + 出口垫税 + 进口垫税</div>
+                            <div class="formula-sub">四大工具组合应用，覆盖进出口全链条金融服务体系</div>
+                        </div>
+                        
+                        <h4 style="margin:20px 0 10px;color:#4c1d95">★ 黄金组合方案</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>组合方案</th>
+                                <th>适用企业类型</th>
+                                <th>覆盖环节</th>
+                                <th>综合成本</th>
+                                <th>核心优势</th>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>LC + 中信保</strong></td>
+                                <td>出口企业</td>
+                                <td>收款+风险保障</td>
+                                <td>3%-6%</td>
+                                <td>双重保障，安全收款</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LC + 出口垫税</strong></td>
+                                <td>出口退税企业</td>
+                                <td>货款+退税双回笼</td>
+                                <td>4%-7%</td>
+                                <td>资金快速回笼</td>
+                            </tr>
+                            <tr>
+                                <td><strong>中信保 + 保单融资</strong></td>
+                                <td>赊销出口企业</td>
+                                <td>风险保障+融资</td>
+                                <td>4%-7%</td>
+                                <td>无抵押无担保</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>进口垫税 + 出口垫税</strong></td>
+                                <td>进料加工企业</td>
+                                <td>进口+出口全链条</td>
+                                <td>5%-8%</td>
+                                <td>资金闭环管理</td>
+                            </tr>
+                            <tr>
+                                <td><strong>四大工具全配置</strong></td>
+                                <td>综合型外贸集团</td>
+                                <td>进出口全链条</td>
+                                <td>5%-10%</td>
+                                <td>全方位金融服务</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#4c1d95">🎯 典型业务场景</h4>
+                        <table class="data-table">
+                            <tr>
+                                <th>业务场景</th>
+                                <th>推荐工具组合</th>
+                                <th>融资额度联动</th>
+                                <th>关键操作要点</th>
+                            </tr>
+                            <tr>
+                                <td><strong>一般贸易出口</strong></td>
+                                <td>LC + 中信保 + 出口垫税</td>
+                                <td>LC额度→信保限额→退税池</td>
+                                <td>单证一致，及时申报</td>
+                            </tr>
+                            <tr>
+                                <td><strong>赊销出口（OA/DA）</strong></td>
+                                <td>中信保 + 保单融资</td>
+                                <td>买方限额→融资额度</td>
+                                <td>限额管理，出运申报</td>
+                            </tr>
+                            <tr>
+                                <td><strong>进料加工</strong></td>
+                                <td>进口垫税 + 出口垫税 + 中信保</td>
+                                <td>总担保→退税池→信保</td>
+                                <td>手册管理，核销及时</td>
+                            </tr>
+                            <tr>
+                                <td><strong>大宗商品进口</strong></td>
+                                <td>进口垫税 + 远期LC + 库存融资</td>
+                                <td>总担保→LC额度→库存额度</td>
+                                <td>价格监控，货权控制</td>
+                            </tr>
+                            <tr>
+                                <td><strong>跨境电商</strong></td>
+                                <td>出口垫税 + 供应链融资</td>
+                                <td>平台数据→授信额度</td>
+                                <td>数据对接，自动放款</td>
+                            </tr>
+                        </table>
+                        
+                        <h4 style="margin:20px 0 10px;color:#4c1d95">📊 额度管理与联动</h4>
+                        <table class="data-table">
+                            <tr><th>额度类型</th><th>占用场景</th><th>释放条件</th><th>优化策略</th></tr>
+                            <tr><td>LC开证额度</td><td>开立信用证</td><td>信用证付款/到期</td><td>远期LC错开到期日</td></tr>
+                            <tr><td>信保买方限额</td><td>向该买方出运</td><td>收汇到账</td><td>分散买方，避免集中</td></tr>
+                            <tr><td>退税池额度</td><td>申报退税</td><td>税款到账还款</td><td>滚动使用，随借随还</td></tr>
+                            <tr><td>进口总担保额度</td><td>进口申报担保</td><td>税款缴纳</td><td>汇总征税，按月释放</td></tr>
+                            <tr><td>供应链授信额度</td><td>应收账款/存货融资</td><td>回款到账</td><td>核心企业确权增额</td></tr>
+                        </table>
+                        
+                        <div class="tip-box integrated">
+                            <strong>💡 综合建议：</strong>
+                            ① 综合型外贸企业应建立四大工具组合应用体系；② 根据业务特点选择2-3个核心工具深度使用；③ 关注额度联动，提高资金使用效率；④ 建立专职团队或外包专业服务商管理
+                        </div>
+                        
+                        <div class="case-card integrated">
+                            <div class="case-title integrated">📌 典型案例：外贸集团综合金融方案</div>
+                            <div class="case-content">
+                                <strong>企业背景：</strong>某大型外贸集团，年进出口额5亿美元，业务涵盖一般贸易、进料加工、大宗商品<br>
+                                <strong>综合方案：</strong><br>
+                                ① 出口端：LC结算为主，搭配中信保覆盖赊销，退税池融资加速资金回笼<br>
+                                ② 进口端：汇总征税+年度总担保2亿元，远期LC锁定成本<br>
+                                ③ 供应链：为核心企业供应商提供反向保理，年融资额3亿元<br>
+                                <strong>效果：</strong>综合资金成本降低至5.5%，资金周转效率提升40%，供应链稳定性显著增强
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ常见问题（放到最后） -->
+        <div class="faq-section">
+            <div class="faq-title">❓ 常见问题 FAQ</div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>申请融资需要准备哪些材料？</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">一般需要：①营业执照、法人身份证；②近2年财务报表；③进出口报关单或合同；④银行流水；⑤根据产品不同可能需要中信保保单、信用证等。具体材料清单可咨询李经理 186-0712-8617。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>融资审批需要多长时间？</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">不同产品审批时效不同：退税池融资T+0~1放款；信用证福费廷T+0；中信保保单融资1-3个工作日；供应链金融线上审批最快当天。加急需求请联系李经理。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>年化利率是多少？</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">利率根据产品和企业资质而定：信用证融资3%-8%；中信保0.3%-3%；出口垫税4%-8%；进口垫税8%-15%；供应链金融6%-15%。优质客户可享受优惠利率。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>小微企业可以申请吗？</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">可以！我们有专门针对小微企业的融资方案，年出口额100万以上即可申请。部分产品支持纯信用、无抵押，中信保还有小微企业专属优惠政策。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>如何联系李经理？</span>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-text">您可以通过以下方式联系：①拨打手机 186-0712-8617；②点击页面右下角在线咨询；③添加微信（同手机号）。工作日9:00-18:00在线。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 聊天窗口 -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">👨‍💼</div>
+                <div>
+                    <div class="chat-title">李经理 - 专属顾问</div>
+                    <div class="chat-subtitle">在线中 | 回复时间 < 5分钟</div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="closeChat()">×</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-time">今天</div>
+            <div class="chat-message bot">
+                <div class="chat-bubble">
+                    您好！我是东风跨境供应链金融李经理，很高兴为您服务！😊<br><br>
+                    请问有什么可以帮您？您可以咨询：<br>
+                    • 信用证融资方案<br>
+                    • 中信保投保指南<br>
+                    • 出口/进口垫税申请<br>
+                    • 供应链金融服务<br>
+                    • 或直接拨打 186-0712-8617
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <div class="chat-input-wrapper">
+                <input type="text" class="chat-input" id="chatInput" placeholder="请输入您的问题..." onkeypress="handleChatKeypress(event)">
+                <button class="chat-send" onclick="sendChatMessage()">➤</button>
+            </div>
+            <div class="chat-quick-replies">
+                <button class="chat-quick-btn" onclick="sendQuickReply('信用证融资')">信用证融资</button>
+                <button class="chat-quick-btn" onclick="sendQuickReply('中信保融资')">中信保融资</button>
+                <button class="chat-quick-btn" onclick="sendQuickReply('出口垫税')">出口垫税</button>
+                <button class="chat-quick-btn" onclick="sendQuickReply('进口垫税')">进口垫税</button>
+                <button class="chat-quick-btn" onclick="sendQuickReply('供应链全融资')">供应链全融资</button>
+                <button class="chat-quick-btn" onclick="sendQuickReply('预约面谈')">预约面谈</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 微信二维码弹窗 -->
+    <div class="wechat-modal" id="wechatModal" onclick="closeWechat(event)">
+        <div class="wechat-content" onclick="event.stopPropagation()">
+            <div class="wechat-title">📱 添加李经理微信</div>
+            <div class="wechat-subtitle">微信同号：186-0712-8617<br>扫码或搜索添加，获取更多资讯</div>
+            <div class="wechat-qrcode">📱</div>
+            <button class="wechat-close" onclick="closeWechat()">关闭</button>
+        </div>
+    </div>
+    
+    <!-- 工具栏 -->
+    <div class="toolbar">
+        <button class="tool-btn secondary" onclick="toggleExportMenu()">📥 导出数据</button>
+        <button class="tool-btn primary" onclick="window.print()">🖨️ 打印</button>
+    </div>
+    
+    <!-- 浮动咨询按钮 -->
+    <button class="float-btn" id="floatBtn" onclick="openChat()">💬</button>
+    
+    <!-- 导出菜单 -->
+    <div class="export-menu" id="exportMenu">
+        <div class="export-option" onclick="exportToCSV()">
+            <span>📊</span>
+            <span>下载 Excel/CSV 格式（信用证速查表）</span>
+        </div>
+        <div class="export-option" onclick="previewLC()">
+            <span>👁️</span>
+            <span>预览信用证速查表</span>
+        </div>
+        <div class="export-option" onclick="exportClientForm()">
+            <span>📝</span>
+            <span>下载客户信息采集表</span>
+        </div>
+        <div class="export-option" onclick="previewClientForm()">
+            <span>👁️</span>
+            <span>预览客户信息采集表</span>
+        </div>
+    </div>
+    
+    <!-- 预览弹窗 -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-content">
+            <div class="preview-header">
+                <div class="preview-title" id="previewTitle">预览</div>
+                <button class="preview-close" onclick="closePreview()">×</button>
+            </div>
+            <div class="preview-body" id="previewBody">
+                <!-- 动态内容 -->
+            </div>
+            <div class="preview-footer">
+                <button class="preview-btn secondary" onclick="closePreview()">关闭</button>
+                <button class="preview-btn primary" id="previewDownloadBtn" onclick="">下载</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==================== 页面功能 ====================
+        
+        function toggleCard(header) {
+            const body = header.nextElementSibling;
+            const arrow = header.querySelector('.card-arrow');
+            body.classList.toggle('open');
+            arrow.classList.toggle('open');
+        }
+        
+        function setFilter(filter) {
+            document.querySelectorAll('.filter-tag').forEach(tag => {
+                tag.classList.remove('active');
+                if (tag.classList.contains(filter) || (filter === 'all' && tag.textContent === '全部显示')) {
+                    tag.classList.add('active');
+                }
+            });
+            
+            document.querySelectorAll('.card[data-category]').forEach(card => {
+                card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
+            });
+            
+            document.getElementById('overviewCard').style.display = filter === 'all' ? 'block' : 'none';
+        }
+        
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const resultsDiv = document.getElementById('searchResults');
+            
+            if (!query) {
+                resultsDiv.style.display = 'none';
+                document.querySelectorAll('.card').forEach(c => c.style.display = 'block');
+                document.getElementById('overviewCard').style.display = 'block';
+                return;
+            }
+            
+            let count = 0;
+            document.querySelectorAll('.card').forEach(card => {
+                if (card.textContent.toLowerCase().includes(query)) {
+                    card.style.display = 'block';
+                    count++;
+                    const body = card.querySelector('.card-body');
+                    const arrow = card.querySelector('.card-arrow');
+                    if (body && !body.classList.contains('open')) {
+                        body.classList.add('open');
+                        arrow && arrow.classList.add('open');
+                    }
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('overviewCard').style.display = 'none';
+            resultsDiv.innerHTML = `<div style="background:${count > 0 ? '#ecfdf5' : '#fef2f2'};padding:15px;border-radius:8px;color:${count > 0 ? '#065f46' : '#991b1b'}"><strong>${count > 0 ? '✓' : '✗'}</strong> 找到 ${count} 个相关结果</div>`;
+            resultsDiv.style.display = 'block';
+        }
+        
+        function toggleExportMenu() {
+            document.getElementById('exportMenu').classList.toggle('show');
+        }
+        
+        // 导出信用证速查表为CSV
+        function exportToCSV() {
+            toggleExportMenu();
+            
+            const lcData = [
+                ['产品名称', '融资时点', '融资比例', '期限', '适用场景'],
+                ['即期信用证', '单证相符后', '100%', '即期', '安全收款'],
+                ['远期信用证', '承兑后', '100%', '30-360天', '延期付款'],
+                ['假远期LC', '即期付款', '100%', '买方付息', '买卖双方双赢'],
+                ['福费廷 ⭐推荐', '承兑后贴现', '90-100%', '无追索权', '优化财务报表'],
+                ['打包贷款', '收到LC后', '70-80%', 'LC有效期', '备货资金'],
+                ['出口押汇', '交单后', '80-90%', '有追索权', '快速回款']
+            ];
+            
+            const feeData = [
+                ['费用项目', '费率标准', '计费基础', '备注'],
+                ['开证手续费', '0.1%-0.3%', 'LC金额', '最低￥200'],
+                ['承兑费', '0.1%-0.3%/季', '承兑金额', '远期LC收取'],
+                ['福费廷利率', 'Libor+100-300bp', '贴现金额', '无追索权'],
+                ['修改费', '￥200-500/笔', '按笔', 'LC修改时'],
+                ['邮电费', '￥200-400/笔', '按笔', 'swift费用']
+            ];
+            
+            let csv = '\uFEFF';
+            csv += '【信用证融资速查表】\n';
+            csv += '导出时间：' + new Date().toLocaleString('zh-CN') + '\n\n';
+            csv += '【产品类型】\n';
+            lcData.forEach(row => {
+                csv += row.join(',') + '\n';
+            });
+            csv += '\n【费用成本】\n';
+            feeData.forEach(row => {
+                csv += row.join(',') + '\n';
+            });
+            
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = '信用证融资速查表_' + new Date().toLocaleDateString('zh-CN') + '.csv';
+            a.click();
+        }
+        
+        // 预览信用证速查表
+        function previewLC() {
+            toggleExportMenu();
+            
+            const html = `
+                <h3 style="margin-bottom:15px;color:#1e3a8a">📋 信用证融资产品类型</h3>
+                <table class="preview-table">
+                    <tr>
+                        <th>产品名称</th>
+                        <th>融资时点</th>
+                        <th>融资比例</th>
+                        <th>期限</th>
+                        <th>适用场景</th>
+                    </tr>
+                    <tr>
+                        <td><strong>即期信用证</strong></td>
+                        <td>单证相符后</td>
+                        <td>100%</td>
+                        <td>即期</td>
+                        <td>安全收款</td>
+                    </tr>
+                    <tr>
+                        <td><strong>远期信用证</strong></td>
+                        <td>承兑后</td>
+                        <td>100%</td>
+                        <td>30-360天</td>
+                        <td>延期付款</td>
+                    </tr>
+                    <tr>
+                        <td><strong>假远期LC</strong></td>
+                        <td>即期付款</td>
+                        <td>100%</td>
+                        <td>买方付息</td>
+                        <td>买卖双方双赢</td>
+                    </tr>
+                    <tr style="background:#eff6ff">
+                        <td><strong>福费廷 ⭐推荐</strong></td>
+                        <td>承兑后贴现</td>
+                        <td>90-100%</td>
+                        <td>无追索权</td>
+                        <td>优化财务报表</td>
+                    </tr>
+                    <tr>
+                        <td><strong>打包贷款</strong></td>
+                        <td>收到LC后</td>
+                        <td>70-80%</td>
+                        <td>LC有效期</td>
+                        <td>备货资金</td>
+                    </tr>
+                    <tr>
+                        <td><strong>出口押汇</strong></td>
+                        <td>交单后</td>
+                        <td>80-90%</td>
+                        <td>有追索权</td>
+                        <td>快速回款</td>
+                    </tr>
+                </table>
+                
+                <h3 style="margin:25px 0 15px;color:#1e3a8a">💰 费用成本明细</h3>
+                <table class="preview-table">
+                    <tr>
+                        <th>费用项目</th>
+                        <th>费率标准</th>
+                        <th>计费基础</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr>
+                        <td>开证手续费</td>
+                        <td>0.1%-0.3%</td>
+                        <td>LC金额</td>
+                        <td>最低￥200</td>
+                    </tr>
+                    <tr>
+                        <td>承兑费</td>
+                        <td>0.1%-0.3%/季</td>
+                        <td>承兑金额</td>
+                        <td>远期LC收取</td>
+                    </tr>
+                    <tr style="background:#eff6ff">
+                        <td><strong>福费廷利率</strong></td>
+                        <td>Libor+100-300bp</td>
+                        <td>贴现金额</td>
+                        <td>无追索权</td>
+                    </tr>
+                    <tr>
+                        <td>修改费</td>
+                        <td>￥200-500/笔</td>
+                        <td>按笔</td>
+                        <td>LC修改时</td>
+                    </tr>
+                    <tr>
+                        <td>邮电费</td>
+                        <td>￥200-400/笔</td>
+                        <td>按笔</td>
+                        <td>swift费用</td>
+                    </tr>
+                </table>
+            `;
+            
+            document.getElementById('previewTitle').textContent = '👁️ 信用证速查表预览';
+            document.getElementById('previewBody').innerHTML = html;
+            document.getElementById('previewDownloadBtn').onclick = exportToCSV;
+            document.getElementById('previewModal').classList.add('show');
+        }
+        
+        // 下载客户信息采集表
+        function exportClientForm() {
+            toggleExportMenu();
+            
+            const formContent = `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 东风跨境供应链金融 - 客户信息采集表
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【基本信息】
+填表日期：___________    客户经理：李经理
+
+【企业信息】
+企业全称：_________________________________________________
+统一社会信用代码：_________________________________________
+注册地址：_________________________________________________
+经营地址：_________________________________________________
+成立时间：___________    注册资本：___________万元
+所属行业：□ 制造业  □ 贸易业  □ 物流业  □ 其他_______
+
+【业务信息】
+年出口额：□ 100万以下  □ 100-500万  □ 500-2000万  □ 2000万以上
+年进口额：□ 100万以下  □ 100-500万  □ 500-2000万  □ 2000万以上
+主要结算方式：□ LC信用证  □ T/T电汇  □ D/P托收  □ OA赊销
+主要出口地区：_____________________________________________
+主要进口地区：_____________________________________________
+
+【融资需求】（可多选）
+□ 信用证开证/福费廷    □ 中信保投保/保单融资
+□ 出口垫税/退税池      □ 进口垫税/税款保函
+□ 供应链金融/保理      □ 其他：_____________
+
+期望融资额度：___________万元    期望利率：___________%
+
+【联系人信息】
+联系人姓名：_________________    职务：_________________
+联系电话：___________________    微信：_________________
+电子邮箱：_______________________________________________
+
+【补充说明】
+_________________________________________________________
+_________________________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📞 咨询热线：186-0712-8617（李经理）
+📧 邮箱：请通过微信发送
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+`;
+            
+            const blob = new Blob([formContent], { type: 'text/plain;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = '客户信息采集表_' + new Date().toLocaleDateString('zh-CN') + '.txt';
+            a.click();
+        }
+        
+        // 预览客户信息采集表
+        function previewClientForm() {
+            toggleExportMenu();
+            
+            const formContent = `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 东风跨境供应链金融 - 客户信息采集表
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【基本信息】
+填表日期：___________    客户经理：李经理
+
+【企业信息】
+企业全称：_________________________________________________
+统一社会信用代码：_________________________________________
+注册地址：_________________________________________________
+经营地址：_________________________________________________
+成立时间：___________    注册资本：___________万元
+所属行业：□ 制造业  □ 贸易业  □ 物流业  □ 其他_______
+
+【业务信息】
+年出口额：□ 100万以下  □ 100-500万  □ 500-2000万  □ 2000万以上
+年进口额：□ 100万以下  □ 100-500万  □ 500-2000万  □ 2000万以上
+主要结算方式：□ LC信用证  □ T/T电汇  □ D/P托收  □ OA赊销
+主要出口地区：_____________________________________________
+主要进口地区：_____________________________________________
+
+【融资需求】（可多选）
+□ 信用证开证/福费廷    □ 中信保投保/保单融资
+□ 出口垫税/退税池      □ 进口垫税/税款保函
+□ 供应链金融/保理      □ 其他：_____________
+
+期望融资额度：___________万元    期望利率：___________%
+
+【联系人信息】
+联系人姓名：_________________    职务：_________________
+联系电话：___________________    微信：_________________
+电子邮箱：_______________________________________________
+
+【补充说明】
+_________________________________________________________
+_________________________________________________________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📞 咨询热线：186-0712-8617（李经理）
+📧 邮箱：请通过微信发送
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+            
+            document.getElementById('previewTitle').textContent = '👁️ 客户信息采集表预览';
+            document.getElementById('previewBody').innerHTML = `<div class="preview-text">${formContent}</div>`;
+            document.getElementById('previewDownloadBtn').onclick = exportClientForm;
+            document.getElementById('previewModal').classList.add('show');
+        }
+        
+        function closePreview() {
+            document.getElementById('previewModal').classList.remove('show');
+        }
+        
+        function openChat() {
+            document.getElementById('chatWidget').classList.add('show');
+            document.getElementById('floatBtn').classList.add('hidden');
+        }
+        
+        function closeChat() {
+            document.getElementById('chatWidget').classList.remove('show');
+            document.getElementById('floatBtn').classList.remove('hidden');
+        }
+        
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if (!text) return;
+            
+            addChatMessage(text, 'user');
+            input.value = '';
+            
+            // 自动回复逻辑
+            setTimeout(() => {
+                const replies = {
+                    '信用证': '信用证融资是我们的优势产品！即期LC开证费0.1%-0.3%，福费廷利率Libor+100-300bp。请问您年LC结算量大概多少？',
+                    '中信保': '中信保是出口企业的"护身符"！短期出口信用险费率0.3%-3%，赔付比例80-90%。我们可以协助您办理投保、限额申请、保单融资一条龙服务。',
+                    '出口垫税': '出口垫税能快速盘活您的退税资金！退税池融资额度可达退税额的80-95%，利率4%-8%。',
+                    '进口垫税': '进口垫税让您先提货后缴税！海关税款保函费率0.5%-2%/季。',
+                    '供应链': '供应链金融解决上下游资金难题！应收账款融资比例70-90%，利率5%-12%。',
+                    '面谈': '好的，李经理可以为您安排面谈。请留下您的联系方式（电话/微信），或拨打186-0712-8617直接预约。'
+                };
+                
+                let replied = false;
+                for (const key in replies) {
+                    if (text.includes(key)) {
+                        addChatMessage(replies[key], 'bot');
+                        replied = true;
+                        break;
+                    }
+                }
+                
+                if (!replied) {
+                    addChatMessage('感谢您的咨询！李经理会为您提供专业的供应链金融解决方案。如需详细解答，请拨打186-0712-8617或添加微信同号。', 'bot');
+                }
+            }, 600);
+        }
+        
+        function sendQuickReply(text) {
+            addChatMessage(text, 'user');
+            setTimeout(() => {
+                const quickReplies = {
+                    '信用证融资': '信用证融资是我们的优势产品！即期LC开证费0.1%-0.3%，福费廷利率Libor+100-300bp。请问您年LC结算量大概多少？',
+                    '中信保融资': '中信保是出口企业的"护身符"！短期出口信用险费率0.3%-3%，赔付比例80-90%。我们可以协助您办理投保、限额申请、保单融资一条龙服务。',
+                    '出口垫税': '出口垫税能快速盘活您的退税资金！退税池融资额度可达退税额的80-95%，利率4%-8%。',
+                    '进口垫税': '进口垫税让您先提货后缴税！海关税款保函费率0.5%-2%/季。',
+                    '供应链全融资': '供应链金融解决上下游资金难题！应收账款融资比例70-90%，利率5%-12%。',
+                    '预约面谈': '好的，李经理可以为您安排面谈。请留下您的联系方式（电话/微信），或拨打186-0712-8617直接预约。'
+                };
+                
+                const reply = quickReplies[text] || '感谢您的咨询！李经理会为您提供专业的供应链金融解决方案。如需详细解答，请拨打186-0712-8617或添加微信同号。';
+                addChatMessage(reply, 'bot');
+            }, 600);
+        }
+        
+        function addChatMessage(text, sender) {
+            const body = document.getElementById('chatBody');
+            const div = document.createElement('div');
+            div.className = 'chat-message ' + sender;
+            div.innerHTML = `<div class="chat-bubble">${text.replace(/\n/g, '<br>')}</div>`;
+            body.appendChild(div);
+            body.scrollTop = body.scrollHeight;
+        }
+        
+        function handleChatKeypress(e) {
+            if (e.key === 'Enter') sendChatMessage();
+        }
+        
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const arrow = element.querySelector('.faq-arrow');
+            answer.classList.toggle('open');
+            arrow.classList.toggle('open');
+        }
+        
+        function showWechat() {
+            document.getElementById('wechatModal').classList.add('show');
+        }
+        
+        function closeWechat(e) {
+            if (!e || e.target.id === 'wechatModal') {
+                document.getElementById('wechatModal').classList.remove('show');
+            }
+        }
+        
+        // 点击外部关闭菜单
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('exportMenu');
+            const toolbar = document.querySelector('.toolbar');
+            if (!toolbar.contains(e.target)) {
+                menu.classList.remove('show');
+            }
+        });
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 打开第一个卡片
+            const firstCard = document.querySelector('.card-header');
+            if (firstCard) toggleCard(firstCard);
+        });
+    </script>
+</body>
+</html>
