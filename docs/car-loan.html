@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车辆贷款 - 东风跨境融资</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: #1e3a5f;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-title h1 {
+            color: #1e3a5f;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .page-title p {
+            color: #666;
+        }
+        
+        .form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e3a5f;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 4px solid #1e3a5f;
+        }
+        
+        .info-box h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        .info-box li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">🚗 东风跨境融资</a>
+        <a href="index.html">← 返回首页</a>
+    </nav>
+    
+    <div class="container">
+        <div class="page-title">
+            <h1>车辆贷款申请</h1>
+            <p>填写以下信息，快速申请您的车辆贷款</p>
+        </div>
+        
+        <div class="form-card">
+            <div class="info-box">
+                <h3>📋 申请须知</h3>
+                <ul>
+                    <li>申请人年龄需在18-60周岁之间</li>
+                    <li>需提供有效身份证件和收入证明</li>
+                    <li>贷款额度最高可达车辆价格的80%</li>
+                    <li>审批结果将在3个工作日内通知</li>
+                </ul>
+            </div>
+            
+            <form>
+                <h3 style="color: #1e3a5f; margin-bottom: 20px;">个人信息</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">姓名 *</label>
+                        <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">手机号码 *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="请输入手机号码" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="idcard">身份证号 *</label>
+                        <input type="text" id="idcard" name="idcard" placeholder="请输入身份证号" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="income">月收入（元）</label>
+                        <input type="number" id="income" name="income" placeholder="请输入月收入">
+                    </div>
+                </div>
+                
+                <h3 style="color: #1e3a5f; margin: 30px 0 20px;">车辆信息</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="brand">车辆品牌</label>
+                        <select id="brand" name="brand">
+                            <option value="">请选择品牌</option>
+                            <option value="dongfeng">东风汽车</option>
+                            <option value="nissan">东风日产</option>
+                            <option value="honda">东风本田</option>
+                            <option value="peugeot">东风标致</option>
+                            <option value="citroen">东风雪铁龙</option>
+                            <option value="other">其他品牌</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="model">车型</label>
+                        <input type="text" id="model" name="model" placeholder="请输入车型">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">车辆价格（元）</label>
+                        <input type="number" id="price" name="price" placeholder="请输入车辆价格">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loan-amount">申请贷款金额（元）</label>
+                        <input type="number" id="loan-amount" name="loan-amount" placeholder="请输入贷款金额">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dealer">选择经销商</label>
+                    <select id="dealer" name="dealer">
+                        <option value="">请选择经销商</option>
+                        <option value="dealer1">北京东风4S店</option>
+                        <option value="dealer2">上海东风4S店</option>
+                        <option value="dealer3">广州东风4S店</option>
+                        <option value="dealer4">武汉东风4S店</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-submit">提交贷款申请</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
