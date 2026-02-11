@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设备贷款 - 东风跨境融资</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: #1e3a5f;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-title h1 {
+            color: #1e3a5f;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .page-title p {
+            color: #666;
+        }
+        
+        .form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a5f;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 4px solid #1e3a5f;
+        }
+        
+        .info-box h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        .info-box li {
+            margin-bottom: 5px;
+        }
+        
+        .equipment-types {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .equipment-type {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .equipment-type:hover {
+            border-color: #1e3a5f;
+            background: #f0f4f8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">🏭 东风跨境融资</a>
+        <a href="index.html">← 返回首页</a>
+    </nav>
+    
+    <div class="container">
+        <div class="page-title">
+            <h1>设备贷款申请</h1>
+            <p>为企业设备采购提供灵活融资方案</p>
+        </div>
+        
+        <div class="form-card">
+            <div class="info-box">
+                <h3>📋 申请须知</h3>
+                <ul>
+                    <li>适用于企业设备采购、生产线升级等用途</li>
+                    <li>贷款额度：10万 - 5000万人民币</li>
+                    <li>还款期限：12-60个月灵活选择</li>
+                    <li>需提供企业营业执照和财务报表</li>
+                </ul>
+            </div>
+            
+            <form>
+                <h3 style="color: #1e3a5f; margin-bottom: 20px;">企业信息</h3>
+                
+                <div class="form-group">
+                    <label for="company-name">企业名称 *</label>
+                    <input type="text" id="company-name" name="company-name" placeholder="请输入企业全称" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="credit-code">统一社会信用代码 *</label>
+                        <input type="text" id="credit-code" name="credit-code" placeholder="请输入统一社会信用代码" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company-type">企业类型</label>
+                        <select id="company-type" name="company-type">
+                            <option value="">请选择企业类型</option>
+                            <option value="limited">有限责任公司</option>
+                            <option value="joint-stock">股份有限公司</option>
+                            <option value="partnership">合伙企业</option>
+                            <option value="sole">个人独资企业</option>
+                            <option value="foreign">外商投资企业</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name">联系人姓名 *</label>
+                        <input type="text" id="contact-name" name="contact-name" placeholder="请输入联系人姓名" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-phone">联系人电话 *</label>
+                        <input type="tel" id="contact-phone" name="contact-phone" placeholder="请输入联系人电话" required>
+                    </div>
+                </div>
+                
+                <h3 style="color: #1e3a5f; margin: 30px 0 20px;">设备信息</h3>
+                
+                <div class="form-group">
+                    <label>设备类型（可多选）</label>
+                    <div class="equipment-types">
+                        <div class="equipment-type">生产设备</div>
+                        <div class="equipment-type">检测设备</div>
+                        <div class="equipment-type">运输设备</div>
+                        <div class="equipment-type">环保设备</div>
+                        <div class="equipment-type">信息化设备</div>
+                        <div class="equipment-type">其他设备</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="equipment-name">设备名称/型号</label>
+                    <input type="text" id="equipment-name" name="equipment-name" placeholder="请描述所需设备的名称或型号">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="equipment-amount">设备数量</label>
+                        <input type="number" id="equipment-amount" name="equipment-amount" placeholder="请输入设备数量" min="1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="equipment-value">设备总价值（万元）*</label>
+                        <input type="number" id="equipment-value" name="equipment-value" placeholder="请输入设备总价值" required>
+                    </div>
+                </div>
+                
+                <h3 style="color: #1e3a5f; margin: 30px 0 20px;">贷款信息</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="loan-amount">申请贷款金额（万元）*</label>
+                        <input type="number" id="loan-amount" name="loan-amount" placeholder="请输入申请金额" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loan-term">贷款期限（月）*</label>
+                        <select id="loan-term" name="loan-term" required>
+                            <option value="">请选择期限</option>
+                            <option value="12">12个月</option>
+                            <option value="24">24个月</option>
+                            <option value="36">36个月</option>
+                            <option value="48">48个月</option>
+                            <option value="60">60个月</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loan-purpose">贷款用途说明</label>
+                    <textarea id="loan-purpose" name="loan-purpose" placeholder="请详细说明贷款用途，如设备更新、产能扩张等"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" required>
+                        我已阅读并同意《设备贷款服务协议》，确认所填信息真实有效
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-submit">提交申请</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
